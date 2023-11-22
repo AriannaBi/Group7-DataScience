@@ -1,0 +1,3 @@
+[submodule "Spacy-Affect-Model"]
+	path = Spacy-Affect-Model
+	url = https://github.com/metalcorebear/Spacy-Affect-Model.git
