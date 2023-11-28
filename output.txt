@@ -1,0 +1,10 @@
+11483    Gunfights Of The Old West by Dakota Livesay
+Name: description, dtype: object
+8721    Traditional and Contemporary Polynesian drum music. From Hula Records International. Songs and Dances from the Islands
+Name: description, dtype: object
+9634    Eleven Moons Productions offers David's third release, Diagonalism, available worldwide Summer 2008. Composed and recorded over a four-month period, Mr. Barro exposes the listener to the full experience of diagonalism, his self-coined sub-genre of electronic music. Using only a MIDI controller a...
+Name: description, dtype: object
+7457    Japanese only EP. Track listing 1. Cruising For Bruising [ Extended Mix ]  2. From Now On [ Band Version ]  3. Run For Cover [ Extended Remix ]  4. Promises [ Extended French Mix ]  5. New Day For You [ Extended Version ]  6. Baby You're Mine [ Street Version ]
+Name: description, dtype: object
+16774    Disc 01:   01 Abertura   02 Emoes   03 Como vai voc / Que sera de ti   04 Detalhes / Detalles   05 Desabafo / Desahogo   06 Mulher Pequena / Muher Pequea   07 Proposta   08 Cncavo e convexo   09 O calhembeque (Road Hog)   10 Canzone per te     Disc 02:   01 Un gato en la oscuridad   02 Im in the...
+Name: description, dtype: object

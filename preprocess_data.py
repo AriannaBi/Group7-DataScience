@@ -84,6 +84,24 @@ def process_and_stemming(s):
     except etree.ParserError: 
         return ''
     
+# # preprocessing for similar items
+# # A lot of the descriptions (and other features) contain HTML.
+# # The function parses and "translates" into plain text descriptions more suitable for analysis.
+# def stemming_data(s):
+#     # stop_words = set(stopwords.words('english'))
+#     stemmer= PorterStemmer()
+#     if not s or s.isspace(): 
+#         # print("Empty description", s, "empty")
+#         return ''
+#     try:
+#         # stemming
+#         strr = s
+#         strr = [stemmer.stem(word) for word in strr]
+#         strr = ' '.join(strr)
+#         return strr 
+#     except etree.ParserError: 
+#         return ''
+    
     
 
 # preprocessing only for removing html, urls and hidden characters
