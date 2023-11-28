@@ -22,6 +22,7 @@ nltk.download('punkt')
 
 
 
+# preprocessing for similar items
 # A lot of the descriptions (and other features) contain HTML.
 # The function parses and "translates" into plain text descriptions more suitable for analysis.
 def preprocess_data(s):
@@ -51,4 +52,35 @@ def preprocess_data(s):
         strr = ' '.join(strr)
         return strr 
     except etree.ParserError: 
+        return ''
+    
+# preprocessing for user description and sentiment analysis 
+def pre_process_for_description(s):
+    stop_words = set(stopwords.words('english'))
+    stemmer= PorterStemmer()
+    if not s or s.isspace(): 
+        return ''
+    try:
+        # remove html tags 
+        strr = str(html.fromstring(s).text_content())
+        # remove URLs
+        strr = re.sub(r"(https|http|href)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b", ' ', strr)
+        # remove html hidden carachters 
+        strr = strr.replace('\n', ' ').replace('\t', ' ').replace("&nbsp", ' ').replace('\r', ' ')
+        # remove punctuation
+        strr = re.sub(r'[^\w\s]|[_+]', ' ', strr)
+        # lowercase
+        strr = strr.lower()
+        # remove numbers
+        strr = re.sub(r'\d+', '', strr)
+        # remove stop words
+        tokens = nltk.word_tokenize(strr)
+        strr = [i for i in tokens if not i in stop_words]
+        # print(len(strr))
+        # if (len(strr) == 0):
+        #     print("-------------------------")
+        # strr = ' '.join(strr)
+        return strr
+        # return str(html.fromstring(s).text_content(s))
+    except etree.ParserError: # I am not able to find out why the error occur so i continued by catching the exception. Seem to happen on some empty description strings 
         return ''
