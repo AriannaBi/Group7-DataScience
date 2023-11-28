@@ -21,7 +21,7 @@ nltk.download('stopwords')
 nltk.download('punkt')
 
 # preprocessing for user description and sentiment analysis 
-def preprocess_data(s):
+def user_description_sentiment_analysis(s):
     stop_words = set(stopwords.words('english'))
     stemmer= PorterStemmer()
     if not s or s.isspace(): 
@@ -55,7 +55,7 @@ def preprocess_data(s):
 # preprocessing for similar items
 # A lot of the descriptions (and other features) contain HTML.
 # The function parses and "translates" into plain text descriptions more suitable for analysis.
-def preprocess_dataaaaa(s):
+def process_and_stemming(s):
     stop_words = set(stopwords.words('english'))
     stemmer= PorterStemmer()
     if not s or s.isspace(): 
